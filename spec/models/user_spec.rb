@@ -12,6 +12,7 @@ RSpec.describe Room, type: :model do
 
     it 'nameが空では登録できないこと' do
       @room.name = ''
+      binding.pry
       @room.valid?
       expect(@room.errors.full_messages).to include("Name can't be blank")
     end
